@@ -45,7 +45,6 @@ def plot(c, d, x1, x2):
             plt.plot(i[0], i[1], 'r*')
         else:
             plt.plot(i[0], i[1], 'bo')
-
     plt.plot(x1[0], x2[0], 'go')
     plt.plot(x1[1], x2[1], 'go')
     plt.grid('on')

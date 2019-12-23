@@ -47,13 +47,16 @@ def simple_perc(d, c):
     D = insertbias(d)
     ts, vs = dividedata(D)
     w = train(ts, w, c)
+    #w = train(D, w, c)
+    #error = test(w, D)
     error = test(w, vs)
     print(error)
+    return w
 
 a, b, x1, x2 = ut.new_f()
-D = ut.new_d(x1, x2, 2000)
+D = ut.new_d(x1, x2, 2)
 print(D)
 c = np.polyfit(x1, x2, 1)
 ut.plot(c, D, x1, x2)
 
-simple_perc(D, 100)
+w = simple_perc(D, 100)
