@@ -17,7 +17,7 @@ def getclass(x1,x2, d1, d2):
     b = np.array([x1[1], x2[1]])
     p = np.array([d1, d2])
     a = np.cross(p-a, b-a)
-    if a < 0:
+    if a >= 0:
         return 1
     else:
         return -1
