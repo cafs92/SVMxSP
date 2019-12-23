@@ -2,8 +2,6 @@ import numpy as np
 import versus.util as ut
 import versus.svm as svm
 
-
-
 def insertbias(dataset):
     new = []
     for i in range(len(dataset)):
