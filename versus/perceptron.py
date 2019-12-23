@@ -1,5 +1,6 @@
 import numpy as np
 import versus.util as ut
+import versus.svm as svm
 
 
 
@@ -55,6 +56,8 @@ def simple_perc(d, c):
 
 a, b, x1, x2 = ut.new_f()
 D = ut.new_d(x1, x2, 2)
+svm.qp(D)
+
 print(D)
 c = np.polyfit(x1, x2, 1)
 ut.plot(c, D, x1, x2)
